@@ -15,7 +15,7 @@ public class TextBoxTests {
     }
 
     @Test
-    void FillFormTest() {
+    void fillFormTest() {
         open("/text-box");
         $("#userName").setValue("Cleo");
         $("#userEmail").setValue("cleo@neumann.com");

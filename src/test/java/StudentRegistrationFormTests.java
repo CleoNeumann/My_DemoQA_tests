@@ -15,7 +15,7 @@ public class StudentRegistrationFormTests {
     }
 
     @Test
-    void SuccessfulRegistrationTest() {
+    void successfulRegistrationTest() {
         open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
