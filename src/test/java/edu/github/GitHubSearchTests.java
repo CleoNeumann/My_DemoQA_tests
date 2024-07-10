@@ -20,7 +20,7 @@ public class GitHubSearchTests {
     }
 
     @Test
-    void EnterpriseMenuSearchTest() {
+    void enterpriseMenuSearchTest() {
 
         open("/");
         $(byTagAndText("button", "Solutions")).hover();
