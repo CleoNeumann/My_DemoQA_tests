@@ -1,4 +1,4 @@
-package github_package;
+package edu.github;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
