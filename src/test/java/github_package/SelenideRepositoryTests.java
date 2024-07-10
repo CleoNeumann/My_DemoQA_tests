@@ -44,6 +44,15 @@ public class SelenideRepositoryTests {
         $("#wiki-pages-filter").setValue("SoftAssertions");
         $("#wiki-pages-box").$(byText("SoftAssertions")).click();
         $(withTagAndText("h4", "JUnit5")).scrollIntoView(true);
-        $("#wiki-body").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})"));
+        $("#wiki-body").shouldHave(text("""
+                @ExtendWith({SoftAssertsExtension.class})
+                class Tests {
+                @Test
+                void test() {
+                Configuration.assertionMode = SOFT;
+                open("page.html");
+                $("#first").should(visible).click();
+                $("#second").should(visible).click();
+                """));
     }
 }
