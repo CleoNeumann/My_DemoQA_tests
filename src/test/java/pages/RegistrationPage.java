@@ -30,7 +30,7 @@ public class RegistrationPage extends PageBase<RegistrationPage> {
     ButtonComponent submitButton = new ButtonComponent();
     ResultTableComponent resultTable = new ResultTableComponent();
 
-    public RegistrationPage OpenPage() {
+    public RegistrationPage openPage() {
         open("/automation-practice-form");
         return this;
     }

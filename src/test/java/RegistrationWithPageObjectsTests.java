@@ -7,7 +7,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
 
     @Test
     void successfulFullRegistrationTest() {
-        registrationPage.OpenPage()
+        registrationPage.openPage()
                 .removeBanner()
                 .setFirstName("Cleo")
                 .setLastName("Neumann")
@@ -38,7 +38,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
 
     @Test
     void successfulShortRegistrationTest() {
-        registrationPage.OpenPage()
+        registrationPage.openPage()
                 .removeBanner()
                 .setFirstName("Cleo")
                 .setLastName("Neumann")
@@ -61,7 +61,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
 
     @Test
     void submitWithEmptyFieldsTest() {
-        registrationPage.OpenPage()
+        registrationPage.openPage()
                 .removeBanner()
                 .clickSubmitBtn()
                 .hasError(registrationPage.firstNameInput)
@@ -73,7 +73,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
 
     @Test
     void checkValidationTest() {
-        registrationPage.OpenPage()
+        registrationPage.openPage()
                 .removeBanner()
                 .setPhoneNumber("123")
                 .setEmail("123")
