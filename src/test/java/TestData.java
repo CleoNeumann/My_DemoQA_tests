@@ -5,7 +5,7 @@ import java.util.Locale;
 
 public class TestData {
 
-    static Faker faker = new Faker(Locale.of("en"));
+    static Faker faker = new Faker(new Locale("en"));
     public String firstName = faker.name().firstName();
     public String lastName = faker.name().lastName();
     public String userEmail = faker.internet().safeEmailAddress();

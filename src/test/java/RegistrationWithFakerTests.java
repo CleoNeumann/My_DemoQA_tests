@@ -4,35 +4,35 @@ import pages.RegistrationPage;
 public class RegistrationWithFakerTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
-    TestData Data = new TestData();
+    TestData data = new TestData();
 
     @Test
     void successFullRegistrationTest() {
         registrationPage.openPage()
                 .removeBanner()
-                .setFirstName(Data.firstName)
-                .setLastName(Data.lastName)
-                .setEmail(Data.userEmail)
-                .setGender(Data.gender)
-                .setPhoneNumber(Data.phoneNumber)
-                .setDateOfBirth(Data.day, Data.month, Data.year)
-                .setSubject(Data.subject)
-                .setHobby(Data.hobby)
-                .uploadPicture(Data.picturePath)
-                .setCurrentAddress(Data.streetAddress)
-                .setState(Data.state)
-                .setCity(Data.city)
+                .setFirstName(data.firstName)
+                .setLastName(data.lastName)
+                .setEmail(data.userEmail)
+                .setGender(data.gender)
+                .setPhoneNumber(data.phoneNumber)
+                .setDateOfBirth(data.day, data.month, data.year)
+                .setSubject(data.subject)
+                .setHobby(data.hobby)
+                .uploadPicture(data.picturePath)
+                .setCurrentAddress(data.streetAddress)
+                .setState(data.state)
+                .setCity(data.city)
                 .clickSubmitBtn()
                 .checkSuccessfulRegistrationTableTitle()
-                .checkResult("Student Name", Data.firstName + " " + Data.lastName)
-                .checkResult("Student Email", Data.userEmail)
-                .checkResult("Gender", Data.gender)
-                .checkResult("Mobile", Data.phoneNumber)
-                .checkResult("Date of Birth", Data.day + " " + Data.month + "," + Data.year)
-                .checkResult("Subjects", Data.subject)
-                .checkResult("Hobbies", Data.hobby)
-                .checkResult("Picture", Data.picturePath)
-                .checkResult("Address", Data.streetAddress)
-                .checkResult("State and City", Data.state + " " + Data.city);
+                .checkResult("Student Name", data.firstName + " " + data.lastName)
+                .checkResult("Student Email", data.userEmail)
+                .checkResult("Gender", data.gender)
+                .checkResult("Mobile", data.phoneNumber)
+                .checkResult("Date of Birth", data.day + " " + data.month + "," + data.year)
+                .checkResult("Subjects", data.subject)
+                .checkResult("Hobbies", data.hobby)
+                .checkResult("Picture", data.picturePath)
+                .checkResult("Address", data.streetAddress)
+                .checkResult("State and City", data.state + " " + data.city);
     }
 }
