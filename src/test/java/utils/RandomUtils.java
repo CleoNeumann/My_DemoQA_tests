@@ -11,8 +11,6 @@ public class RandomUtils {
         System.out.println(getRandomAddress());
         System.out.println(getRandomInt(111, 99999999));
         System.out.println(getRandomPhone());
-        System.out.println(getRandomGender());
-        System.out.println(getRandomMonth());
     }
 
     public static String getRandomString(int len) {
@@ -44,52 +42,9 @@ public class RandomUtils {
                 getRandomInt(111, 999), getRandomInt(11, 99), getRandomInt(11, 99));
     }
 
-    public static String getRandomGender() {
-        String[] genders = {"Male", "Female", "Other"};
-
-        return getRandomItemFromArray(genders);
-    }
-
     public static String getRandomItemFromArray(String[] array) {
         int index = getRandomInt(0, array.length - 1);
 
         return array[index];
-    }
-
-    public static String getRandomMonth() {
-        String[] months = {"January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"};
-
-        return getRandomItemFromArray(months);
-    }
-
-    public static String getRandomHobby() {
-        String[] hobby = {"Sports", "Reading", "Music"};
-
-        return getRandomItemFromArray(hobby);
-    }
-
-    public static String getRandomSubject() {
-        String[] subject = {"Maths", "Accounting", "Arts", "Social Studies",
-                "Biology", "Physics", "Chemistry", "Computer Science", "Commerce",
-                "Economics", "Civics", "Hindi", "English", "History"};
-
-        return getRandomItemFromArray(subject);
-    }
-
-    public static String getRandomState() {
-        String[] state = {"NCR", "Uttar Pradesh", "Haryana", "Rajasthan"};
-
-        return getRandomItemFromArray(state);
-    }
-
-    public static String getCity(String state) {
-        return switch (state) {
-            case "NCR" -> getRandomItemFromArray(new String[]{"Delhi", "Gurgaon", "Noida"});
-            case "Uttar Pradesh" -> getRandomItemFromArray(new String[]{"Agra", "Lucknow", "Merrut"});
-            case "Haryana" -> getRandomItemFromArray(new String[]{"Karnal", "Panipat"});
-            case "Rajasthan" -> getRandomItemFromArray(new String[]{"Jaipur", "Jaiselmer"});
-            default -> throw new IllegalStateException("Unexpected value: " + state);
-        };
     }
 }

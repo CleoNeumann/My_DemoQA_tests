@@ -25,7 +25,7 @@ public class RegistrationWithTestDataTests extends TestBase {
 //        userEmail = "cleo@neumann.com";
 //    }
 
-    // или создать класс, специально для тестовых данных типа TestData
+    // или создать класс, специально для тестовых данных типа utils.TestData
 
     @Test
     void successfulRegistrationTest() {

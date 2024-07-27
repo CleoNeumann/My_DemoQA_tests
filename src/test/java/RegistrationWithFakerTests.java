@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
+import utils.TestData;
 
 public class RegistrationWithFakerTests extends TestBase {
 
