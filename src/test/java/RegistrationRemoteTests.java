@@ -88,7 +88,8 @@ public class RegistrationRemoteTests extends TestBaseRemote {
                     .removeBanner();
         });
         step("Submit form without filling out", () -> {
-            registrationPage.clickSubmitBtn();
+            registrationPage.moveToBtn()
+                    .clickSubmitBtn();
         });
         step("Check form has errors", () -> {
             registrationPage.hasError(registrationPage.firstNameInput)
@@ -109,7 +110,8 @@ public class RegistrationRemoteTests extends TestBaseRemote {
                     .setEmail("123");
         });
         step("Submit form", () -> {
-            registrationPage.clickSubmitBtn();
+            registrationPage.moveToBtn()
+                    .clickSubmitBtn();
         });
         step("Check form has errors", () -> {
             registrationPage.hasError(registrationPage.emailInput)
