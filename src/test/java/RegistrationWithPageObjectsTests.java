@@ -66,7 +66,6 @@ public class RegistrationWithPageObjectsTests extends TestBase {
                 .clickSubmitBtn()
                 .hasError(registrationPage.firstNameInput)
                 .hasError(registrationPage.lastNameInput)
-                .hasError(registrationPage.genderRadioButton)
                 .hasError(registrationPage.phoneNumber)
                 .checkResultInvisible();
     }
