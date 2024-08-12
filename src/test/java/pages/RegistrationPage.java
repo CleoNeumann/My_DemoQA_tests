@@ -23,7 +23,8 @@ public class RegistrationPage extends PageBase<RegistrationPage> {
             lastNameInput = $("#lastName"),
             emailInput = $("#userEmail"),
             genderRadioButton = $("#genterWrapper"),
-            phoneNumber = $("#userNumber");
+            phoneNumber = $("#userNumber"),
+            submitBtn = $("#submit");
     private final String alertColor = "rgb(220, 53, 69)";
 
     CalendarComponent calendarComponent = new CalendarComponent();
@@ -125,6 +126,11 @@ public class RegistrationPage extends PageBase<RegistrationPage> {
 
     public RegistrationPage checkResultInvisible() {
         resultTable.checkModalInvisible();
+        return this;
+    }
+
+    public RegistrationPage moveToBtn() {
+        submitBtn.scrollIntoView(false);
         return this;
     }
 }

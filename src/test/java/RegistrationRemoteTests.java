@@ -27,6 +27,7 @@ public class RegistrationRemoteTests extends TestBaseRemote {
                     .setHobby("Music")
                     .uploadPicture("testImage.jpg")
                     .setCurrentAddress("Somewhere")
+                    .moveToBtn()
                     .setState("NCR")
                     .setCity("Delhi");
         });
@@ -62,7 +63,8 @@ public class RegistrationRemoteTests extends TestBaseRemote {
                     .setDateOfBirth("28", "April", "1994");
         });
         step("Submit form", () -> {
-            registrationPage.clickSubmitBtn();
+            registrationPage.moveToBtn()
+                    .clickSubmitBtn();
         });
         step("Check form results", () -> {
             registrationPage.checkSuccessfulRegistrationTableTitle()
