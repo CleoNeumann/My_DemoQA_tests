@@ -23,8 +23,7 @@ public class RegistrationPage extends PageBase<RegistrationPage> {
             lastNameInput = $("#lastName"),
             emailInput = $("#userEmail"),
             genderRadioButton = $("#genterWrapper"),
-            phoneNumber = $("#userNumber"),
-            submitBtn = $("#submit");
+            phoneNumber = $("#userNumber");
     private final String alertColor = "rgb(220, 53, 69)";
 
     CalendarComponent calendarComponent = new CalendarComponent();
