@@ -130,7 +130,7 @@ public class RegistrationPage extends PageBase<RegistrationPage> {
     }
 
     public RegistrationPage moveToBtn() {
-        submitBtn.scrollIntoView(true);
+        submitButton.moveTo("#submit");
         return this;
     }
 }
