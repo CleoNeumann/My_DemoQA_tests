@@ -54,5 +54,6 @@ test {
 task smoke_test(type: Test) {
     useJUnitPlatform {
         includeTags("smoke")
+        systemProperties(System.getProperties())
     }
 }
