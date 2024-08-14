@@ -38,8 +38,7 @@ compileTestJava{
     options.encoding = 'UTF-8'
 }
 
-test {
-//    SystemProperties += System.properties
+tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 
@@ -54,6 +53,5 @@ test {
 task smoke_test(type: Test) {
     useJUnitPlatform {
         includeTags("smoke")
-        systemProperties(System.getProperties())
     }
 }
