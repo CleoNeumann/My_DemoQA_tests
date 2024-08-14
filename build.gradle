@@ -38,9 +38,9 @@ compileTestJava{
     options.encoding = 'UTF-8'
 }
 
-test {
-//    SystemProperties += System.properties
+tasks.withType(Test) {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
 
     testLogging {
         lifecycle {
