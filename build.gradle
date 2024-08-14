@@ -41,6 +41,7 @@ compileTestJava{
 test {
 //    SystemProperties += System.properties
     useJUnitPlatform()
+    systemProperties(System.getProperties())
 
     testLogging {
         lifecycle {
