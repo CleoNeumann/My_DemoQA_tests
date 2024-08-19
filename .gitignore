@@ -5,6 +5,7 @@ build/
 !**/src/test/**/build/
 *.log
 Snippets.*
+notifications/
 
 ### IntelliJ IDEA ###
 /.idea
